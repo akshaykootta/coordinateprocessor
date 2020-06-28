@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "300212e1-67fc-46fb-9ebe-2e199f5826e4",
+		"name": "MufgCordinateLength",
+		"description": "APIS to get the process cordinates and distances",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "postInput",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Lines\":[\r\n      {\r\n         \"lineNumber\":\"0\",\r\n         \"x0\":\"10\",\r\n         \"x1\":\"100.5\",\r\n         \"y0\":\"87.45\",\r\n         \"y1\":\"200.2\"\r\n      },\r\n      {\r\n         \"lineNumber\":\"1\",\r\n         \"x0\":\"233.0\",\r\n         \"x1\":\"344.20\",\r\n         \"y0\":\"455.0\",\r\n         \"y1\":\"895.0\"\r\n      },\r\n      {\r\n         \"lineNumber\":\"2\",\r\n         \"x0\":\"214.0\",\r\n         \"x1\":\"344.0\",\r\n         \"y0\":\"425.0\",\r\n         \"y1\":\"859.0\"\r\n      },\r\n      {\r\n         \"lineNumber\":\"3\",\r\n         \"x0\":\"100.0\",\r\n         \"x1\":\"200.0\",\r\n         \"y0\":\"100.0\",\r\n         \"y1\":\"200.0\"\r\n      },\r\n      {\r\n         \"lineNumber\":\"4\",\r\n         \"x0\":\"104.0\",\r\n         \"x1\":\"903.0\",\r\n         \"y0\":\"102.0\",\r\n         \"y1\":\"207.0\"\r\n      },\r\n      {\r\n         \"lineNumber\":\"5\",\r\n         \"x0\":\"100.0\",\r\n         \"x1\":\"903.0\",\r\n         \"y0\":\"100.0\",\r\n         \"y1\":\"207.0\"\r\n      }\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/cordinates/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"cordinates",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getinput",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Lines\":[\r\n      {\r\n         \"lineNumber\":\"0\",\r\n         \"x0\":\"23\",\r\n         \"x1\":\"34\",\r\n         \"y0\":\"45\",\r\n         \"y1\":\"89\"\r\n      },\r\n      {\r\n         \"lineNumber\":\"1\",\r\n         \"x0\":\"233\",\r\n         \"x1\":\"344\",\r\n         \"y0\":\"455\",\r\n         \"y1\":\"895\"\r\n      },\r\n      {\r\n         \"lineNumber\":\"2\",\r\n         \"x0\":\"213\",\r\n         \"x1\":\"344\",\r\n         \"y0\":\"425\",\r\n         \"y1\":\"859\"\r\n      }\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/cordinates/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"cordinates",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMaxLengthFromCsv",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ=",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/cordinates/getmaxlength",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"cordinates",
+						"getmaxlength"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
