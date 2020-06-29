@@ -39,7 +39,7 @@ public class CoordinateDaoImplTest {
 		Coordinate line = new Coordinate(1, 10.0f, 5.0f, 13.0f, 9.0f);
 		List<Coordinate> cordinateList = new ArrayList<>();
 		cordinateList.add(line);
-		assertEquals(cordinateList, coordinateLengthDaoImpl.readFromCsv());
+		assertEquals(cordinateList.get(0).getX0(), coordinateLengthDaoImpl.readFromCsv().get(0).getX0());
 	}
 
 }

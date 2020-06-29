@@ -57,7 +57,7 @@ public class CoordinateController {
 	 */
 	@RequestMapping(value = "/add", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
 	public ResponseEntity<Object> addLineInput(
-			@Valid @RequestBody HashMap<String, ArrayList<Coordinate>> inputLinesMap) {
+			 @RequestBody HashMap<String, ArrayList<Coordinate>> inputLinesMap) {
 		logger.info(inputLinesMap.get("Lines").toString());
 
 		CoordinateSuccessResponse coordinateSuccessResponse;
